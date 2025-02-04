@@ -1,0 +1,121 @@
+:root {
+  --colorHover: #ff006a;
+  --white-color: #dedede;
+  --bg: #0b0b0b;
+  --floatBgColor: rgba(0, 0, 0, 0.3);
+  --primary-color: #57a0ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: var(--white-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.element {
+  position: absolute;
+  z-index: -5;
+  opacity: 0;
+}
+.element-top.show {
+  top: -60%;
+  transition: 1s cubic-bezier(0.2, 1, 0.1, 1);
+}
+
+.element-bottom.show {
+  top: 130%;
+  transition: 1s cubic-bezier(0.2, 1, 0.1, 1);
+}
+.element-bottom.animate {
+  animation-delay: -0.3s;
+}
+.animate {
+  animation: floating 2s ease-in-out infinite;
+}
+
+.logo-animate {
+  z-index: 1;
+  animation: floating 2s ease-in-out infinite;
+  animation-delay: -1s;
+}
+
+.eagleblue-logo {
+  width: 240px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.contents.show {
+  scale: 1;
+  transition: 1s cubic-bezier(0.2, 1, 0.1, 1);
+  transform: rotate(0);
+}
+
+.contents {
+  scale: 0;
+  transform: rotate(-180deg);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts-container {
+  position: absolute;
+  top: 50%;
+}
+
+.insta-icon {
+  stroke: #ff006a;
+}
+.folder-icon {
+  stroke: var(--primary-color);
+}
+.icon {
+  width: 60px;
+  height: 60px;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
