@@ -1,8 +1,8 @@
 # Eagle Blue Team
 
-## Credits
+## Eagle Blue Intro/Outro
 
-Icons used in this project are from [Feather Icons](https://feathericons.com), which are licensed under the [MIT License](https://opensource.org/licenses/MIT).
+See [Intro/Outro](https://www.instagram.com/stories/highlights/18268938313166530) on Eagle Blue Instagram Highlights
 
 ## License
 
