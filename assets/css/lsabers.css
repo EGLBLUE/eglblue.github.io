@@ -1,0 +1,74 @@
+:root {
+  --saber-color: #9900ff;
+  --inset-saber-color: #e600ffb2;
+}
+.lsabers {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: cameraY 7s ease-in-out infinite,
+    cameraZ 7s -1s ease-in-out infinite;
+}
+
+.lightsaber {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--saber-color),
+    inset 0 0 2px var(--inset-saber-color);
+  filter: drop-shadow(0px 0px 4px var(--saber-color));
+}
+
+.bar-lsaber {
+  width: 100%;
+  height: 7%;
+  transform: scaleX(0);
+  animation: scaleToX 2s 0.3s var(--cubic-fast-in) forwards,
+    fadeIn 2s ease-in-out forwards;
+  box-shadow: 0 0 10px 1px var(--saber-color);
+}
+
+.lsaber-wrapper {
+  position: absolute;
+  z-index: -1;
+  width: 400px;
+  height: 200px;
+  top: 30%;
+}
+
+.lsaber-line {
+  position: absolute;
+  rotate: 45deg;
+  width: 80%;
+  height: 1%;
+  transform: scaleX(0);
+  animation: scaleToX 2s 0.3s var(--cubic-fast-in) forwards;
+  transform-origin: right bottom;
+}
+
+.lsaber-line1 {
+  top: 95%;
+  left: 50%;
+  width: 60%;
+}
+
+.lsaber-line2 {
+  top: 100%;
+  left: 45%;
+  width: 90%;
+  height: 1.4%;
+}
+
+.lsaber-line3 {
+  top: 130%;
+  left: 25%;
+  width: 160%;
+  height: 2%;
+  z-index: 3;
+}
+
+.lsaber-wrapper2 {
+  transform: rotateY(180deg);
+}

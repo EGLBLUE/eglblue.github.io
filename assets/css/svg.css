@@ -1,0 +1,48 @@
+.insta-bg {
+  fill: url(#gradient);
+  clip-path: inset(0 100% 0 0);
+  transition: 0.3s var(--cubic-fast-in);
+}
+
+.insta-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.insta-icon-bg {
+  width: 84%;
+  height: 84%;
+  position: absolute;
+  border-radius: 5px;
+  z-index: -1;
+  background: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(254, 1, 171));
+  transition: 0.3s var(--cubic-fast-in);
+  clip-path: inset(0 100% 0 0);
+}
+
+.insta-icon:hover .insta-icon-bg {
+  clip-path: inset(0 0 0 0);
+}
+
+.folder-icon-path {
+  fill: #0072fc;
+  stroke: none;
+  stroke-width: 0;
+}
+.folder-icon .file-in-folder-path {
+  clip-path: inset(100% 0 0 0);
+  fill: #fff;
+  stroke: none;
+  stroke-width: 0;
+  transition: 1s var(--cubic-superfast-in);
+}
+
+.folder-icon:hover .file-in-folder-path {
+  clip-path: inset(0 0 0 0);
+}
+
+.title:hover .title-stroke {
+  filter: invert();
+}
